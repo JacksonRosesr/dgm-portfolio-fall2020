@@ -1,3 +1,4 @@
 body{
-    background-color: rgb(31, 136, 228);
+    background-color: rgba(31, 136, 228, 1);
+    border: solid;
 }
