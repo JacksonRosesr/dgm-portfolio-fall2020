@@ -1,0 +1,126 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: solid; */
+    border-color: #023440;
+    border-width: 3px;
+    margin:7px
+  }
+  hr{
+    height: 2px;
+    border-color: #023440;
+    background-color: #023440;
+  }
+  body {
+    background-color: #CEE8F2;
+    width: 1000px;
+    margin: auto;
+    font-family: serif;
+  }
+  
+  figure img {
+    width: 200px;
+    height: 200px;
+  }
+  #name-date{
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    border-color: #023440;
+    border-width: 3px;
+    margin: 1px;
+    background-color: #88D4F2;
+    color: #023440;
+  }
+  #name{
+    margin: 7px;
+    font-size: 25px;
+  }
+  time{
+    margin: 7px;
+    font-size: 25px;
+  }
+  #bio{
+    justify-content: space-between;
+    border: solid;
+    border-color: #023440;
+    border-width: 3px;
+    margin: 1px;
+    background-color: #88D4F2;
+  }
+  #interests{
+    width: 547px;
+    margin: 5px 235px 1px 10px;
+  }
+  #section-1{
+   /* border: solid; */
+    border-color: #023440;
+    border-width: 3px;
+    display: flex;
+    margin: -1.5px;
+  }
+  #section-2{
+    display: flex;
+  }
+  #logos{
+    display: flex;
+    justify-content: space-between;
+  }
+  figure{
+   max-width: 200px;
+   padding: 10px 0px 10px 0px;
+   margin: 0px;
+  }
+  
+  figcaption{
+    background: rgba(10, 44, 50, .75);
+    float: top;
+    position: relative;
+    margin: -20px 0px 0px 0px;
+    color: #CEE8F2;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+  }
+  #html img{
+    margin: 0px -20px 0px 0px;
+  }
+  
+  #profile-picture{
+   max-height: 200px;
+   max-width: 200px;
+   margin: 1px;
+  }
+  .list-title{
+    margin: -5px;
+    padding: 1px;
+  }
+  h4{
+    margin: 0px;
+    padding: 0px;
+  }
+  #list{
+    padding: 0px 0px 0px 17px;
+    margin: 7px 0px 0px 0px;
+  }
+  li{
+    margin: 7px;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    /*border: solid; */
+    border-color: #023440;
+    border-width: 3px;
+    margin: 5px;
+  }
+  h5, footer{
+    margin: 4px 0px 2px 0px;
+  }
+  #section-3{
+    border: solid;
+    border-color: #023440;
+    border-width: 3px;
+    padding: 5px;
+    background-color: #88D4F2;
+  }
