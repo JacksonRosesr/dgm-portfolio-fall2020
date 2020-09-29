@@ -27,6 +27,7 @@ nav{
 .nav-list{
     display: flex;
     flex-direction: row;
+    justify-content: right;
     list-style-type: none;
     margin-right: 2rem;
 }
@@ -49,10 +50,30 @@ nav{
     background-color: #000;
     background-image: linear-gradient(135degrees, #698fb5 0%, #000)
 }
+#welcome-section h1{
+    color: white;
+}
+.projects-section{
+    text-align: center;
+    padding: 5rem 2rem;
+    background: dodgerblue;
+}
+.projects-grid{
+
+}
 figure img{
     height: 200px;
     width: 200px;
 }
-h1{
-
+figcaption{
+    background-color: rgba(56, 49, 49, 0.5);
+    text: white;
 }
+.contact-section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+/*h1{
+}*/
