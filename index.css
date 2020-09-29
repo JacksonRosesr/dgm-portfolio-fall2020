@@ -18,13 +18,15 @@ nav{
     justify-content: right;
 }
 #navbar {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: right;
     border: 1px solid black;
     background-color: red;
 }
 .nav-list{
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     margin-right: 2rem;
 }
@@ -50,4 +52,7 @@ nav{
 figure img{
     height: 200px;
     width: 200px;
+}
+h1{
+
 }
