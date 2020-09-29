@@ -58,16 +58,16 @@ nav{
     padding: 5rem 2rem;
     background: dodgerblue;
 }
-.projects-grid{
+/*.projects-grid{
 
-}
+}*/
 figure img{
     height: 200px;
     width: 200px;
 }
 figcaption{
     background-color: rgba(56, 49, 49, 0.5);
-    text: white;
+    /*text: white;*/
 }
 .contact-section{
 display: flex;
