@@ -39,41 +39,78 @@ body{
 .nav-list a:hover{
     background: green;
 }
+
+
+/*Welcome Section*/
 #welcome-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100vh;
     background-color: #000;
     background-image: linear-gradient(135deg, #698fb5 0%, #000 100%);
 }
 #welcome-section h1{
-color: white;
+color: whitesmoke;
 }
+#welcome-section h2{
+    color: whitesmoke;
+}
+
+
+/*Work Section*/
 .projects-section{
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 0rem;
     background: dodgerblue;
-    height: 60vh;
+    height: 100%;
+    /*width: 100%;*/
 }
-.projects-grid{
-display: grid;
-grid-template-columns: repeat(autofit, minmax(320px, 1fr));
-grid-gap: 5rem;
-width: 100%;
-max-width: 1280px;
-margin: 0 auto;
-margin-bottom: 6rem;
+.project-header {
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    border-bottom: 0.2rem solid black;
+}
+.projects-section a{
+    width: 30rem;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 5rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 32rem;
+    width: 30rem;
+    box-shadow:gray;
 }
 figure img{
-    height: 20rem;
-    width: 20rem;
+    height: 30rem;
+    width: 30rem;
+    object-fit: cover;
 }
 figcaption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(56, 49, 49, 0.5);
+    width: 30rem;
+    font-size: 2rem;
     /*text: white;*/
 }
+
+/*Conact Section*/
 .contact-section{
     display: flex;
     flex-direction: column;
@@ -82,14 +119,16 @@ figcaption{
     align-items: center;
     width: 100%;
     height: 80vh;
-    padding: 0 2rem;
     background: orange;
 }
 .contact-section-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: dodgerblue;
+    color: white;
+}
+.contact-section-header h1{
+    text-decoration: underline;
 }
 .contact-links{
     display: flex;
@@ -117,12 +156,17 @@ transform: translateY(-8px);
 h1{
     font-size: 3rem;
 }
-@media screen and (max-width: 28.75em){
+@media screen and (max-width: 35rem){
     .contact-links{
         flex-direction: column;
         align-items: center;
     }
     #welcome-section{
-        background-image: linear-gradient(270deg, #5db34b 0%, #c7aa09 100%)
+        background-image: linear-gradient(270deg, #5db34b 0%, #c7aa09 100%);
+    }
+    .projects-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
