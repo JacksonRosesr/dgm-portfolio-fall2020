@@ -55,13 +55,20 @@ color: white;
     text-align: center;
     padding: 5rem 2rem;
     background: dodgerblue;
+    height: 60vh;
 }
-/*.projects-grid{
-
-}*/
+.projects-grid{
+display: grid;
+grid-template-columns: repeat(autofit, minmax(320px, 1fr));
+grid-gap: 5rem;
+width: 100%;
+max-width: 1280px;
+margin: 0 auto;
+margin-bottom: 6rem;
+}
 figure img{
-    height: 200px;
-    width: 200px;
+    height: 20rem;
+    width: 20rem;
 }
 figcaption{
     background-color: rgba(56, 49, 49, 0.5);
@@ -72,6 +79,38 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;
+align-items: center;
+width: 100%;
+height: 80vh;
+padding: 0 2rem;
+background: orange;
+}
+.contact-section-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: dodgerblue;
+}
+.contact-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+.contact-details{
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover{
+transform: translateY(8px);
 }
 /*h1{
 }*/
