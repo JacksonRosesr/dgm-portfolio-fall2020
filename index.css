@@ -66,7 +66,7 @@ color: whitesmoke;
     padding: 0rem;
     background: dodgerblue;
     height: 100%;
-    /*width: 100%;*/
+    width: 100%;
 }
 .project-header {
     text-align: center;
@@ -75,17 +75,18 @@ color: whitesmoke;
     border-bottom: 0.2rem solid black;
 }
 .projects-section a{
-    width: 30rem;
+    width: 300px; 
+    height: 320px;
 }
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 5rem;
+    grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
-    margin-top: 3rem;
+    
 }
 figure{
     display: flex;
