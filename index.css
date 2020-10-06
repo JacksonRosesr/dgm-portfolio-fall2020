@@ -9,7 +9,7 @@ html{
     padding: 0px;
 }
 body{
-    background-color: rgba(31, 136, 228, 1);
+    background-color: #58A38F;
     border: solid;
 }
 #navbar {
@@ -50,7 +50,7 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(135deg, #698fb5 0%, #000 100%);
+    background-image: linear-gradient(135deg, #75D6F0 0%, #F0CA69 100%);
 }
 #welcome-section h1{
 color: whitesmoke;
@@ -64,7 +64,7 @@ color: whitesmoke;
 .projects-section{
     text-align: center;
     padding: 0rem;
-    background: dodgerblue;
+    background: #5894A3;
     height: 100%;
     width: 100%;
 }
@@ -120,7 +120,7 @@ figcaption{
     align-items: center;
     width: 100%;
     height: 80vh;
-    background: orange;
+    background: #58A38F;
 }
 .contact-section-header{
     display: flex;
@@ -147,12 +147,16 @@ figcaption{
 .contact-details{
     font-size: 2.4rem;
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
    /* text-shadow: 0 2px 0 #1f1f1f; */
     transition: transform 0.3s ease-out;
 }
 .contact-details:hover{
 transform: translateY(-8px);
+}
+footer{
+    text-align: center;
+    color: whitesmoke
 }
 h1{
     font-size: 3rem;
