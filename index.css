@@ -161,8 +161,15 @@ figcaption{
 transform: translateY(-8px);
 }
 footer{
+    margin: 5px;
     text-align: center;
     color: whitesmoke
+}
+hr{
+    height: 1rem;
+    max-height: 2rem;
+    background-color: #F0CA69;
+    margin: 1rem;
 }
 h1{
     font-size: 3rem;
