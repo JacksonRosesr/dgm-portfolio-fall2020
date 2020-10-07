@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: flex-end;
     border: 1px solid black;
-    background-color: red;
+    background-color: #75D6F0;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,11 +33,11 @@ body{
     display:block;
     font-size: 2rem;
     padding: 2rem;
-    color: #fff;
+    color: whitesmoke;
     text-decoration: none;
 }
 .nav-list a:hover{
-    background: green;
+    background: #6598A7;
 }
 
 
@@ -65,14 +65,16 @@ color: whitesmoke;
     text-align: center;
     padding: 0rem;
     background: #5894A3;
-    height: 100%;
-    width: 100%;
+    height: 100vh, auto;
+    width: auto;
 }
 .project-header {
     text-align: center;
+    color: whitesmoke;
     margin: auto;
     padding: auto;
-    border-bottom: 0.2rem solid black;
+    max-width: 500px;
+    border-bottom: 0.2rem solid whitesmoke;
 }
 .projects-section a{
     width: 300px; 
@@ -83,9 +85,12 @@ color: whitesmoke;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
     width: 100%;
+    height: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: auto;
     margin-bottom: 6rem;
+    margin-top: 6rem;
+    margin-right: 23rem;
     
 }
 figure{
@@ -105,10 +110,11 @@ figcaption{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(56, 49, 49, 0.5);
+    background-color: #75D6F077;
     width: 30rem;
     font-size: 2rem;
-    /*text: white;*/
+    color: #F0CA69;
+    text-decoration: none;
 }
 
 /*Conact Section*/
@@ -174,4 +180,5 @@ h1{
         flex-direction: column;
         align-items: center;
     }
+    
 }
