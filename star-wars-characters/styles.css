@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.mainheader{
+    display: flex;
+    justify-content: space-around;
+    background-color: beige;
+    margin: 1rem;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
