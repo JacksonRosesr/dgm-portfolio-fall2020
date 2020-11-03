@@ -6,7 +6,7 @@
 
 .mainheader{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: beige;
     margin: 1rem;
 }

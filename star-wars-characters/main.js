@@ -19,60 +19,57 @@ otherButton.textContent = 'Other Characters'
 mainHeader.appendChild(otherButton)
 
 const maleCharacters = people.filter(person => person.gender === 'male')
-console.log(maleCharacters)
+
+const femaleCharacters = people.filter(person => person.gender === 'female')
+
+const otherCharacters = people.filter(person => {
+    if (person.gender === 'n/a' ||
+        person.gender === 'none' ||
+        person.gender === 'hermaphrodite') {
+        return person
+    }
+})
 
 maleButton.addEventListener('click', (event) => {
    populateDOM(maleCharacters)
 })
 
-const femaleCharacters = people.filter(person => person.gender === "female")
+femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
 
-femaleButton.addEventListener('click', (event) => {
-    populateDOM(femaleCharacters)
- })
-
-//const otherCharacters = people.filter(person => gender === 'n/a')
-
- otherButton.addEventListener('click', (event) => {
-    populateDOM(otherCharacters)
- })
-
+otherButton.addEventListener('click', () => populateDOM(otherCharacters))
 
 function populateDOM(characters) {
     removeChildren(mainContent)
-    characters.forEach(person => {
+    characters.forEach(element => {
         const charFigure = document.createElement('figure')
         const charImg = document.createElement('img')
-        let charNum = getLastNumber(person.url)
+        let charNum = getLastNumber(element.url)
         charImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
-        charImg.addEventListener('error', () =>{
-            console.log("Got a bad image")
-            charImg.hidden = true //genius level problem solving
-        })
+        charImg.addEventListener('error', () => charImg.hidden = true) // genius level
         const charCaption = document.createElement('figcaption')
-        charCaption.textContent = person.name
+        charCaption.textContent = element.name
     
         charFigure.appendChild(charImg)
         charFigure.appendChild(charCaption)
+    
         mainContent.appendChild(charFigure)
     })
 }
 
-
-//let theURL = "https://swapi.co/api/people/1/"
+// let theURL = "https://swapi.co/api/people/2/"
+// let theURL2 = "https://swapi.co/api/people/14/"
 
 function getLastNumber(url) {
-   let end= url.lastIndexOf('/')
-   let start = end -2
-   if (url.charAt(start) === '/') {
-       start++
-   }
-   return url.slice(start, end)
-    
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if (url.charAt(start) === '/') {
+        start++
+    }
+    return url.slice(start, end)
 }
 
-function removeChildren(container){
-    while(container.firstchild){
-        container.removeChild(container.firstchild)
-    }
+function removeChildren(container) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
 }
