@@ -1,5 +1,8 @@
 import { people } from '../data/people.js'
 
+import{removeChildren} from '../utils/index.js'
+import{getLastNumber} from '../utils/index.js'
+
 const mainContent = document.querySelector('#main')
 
 const mainHeader = document.createElement('header')
@@ -54,22 +57,4 @@ function populateDOM(characters) {
     
         mainContent.appendChild(charFigure)
     })
-}
-
-// let theURL = "https://swapi.co/api/people/2/"
-// let theURL2 = "https://swapi.co/api/people/14/"
-
-function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    let start = end - 2
-    if (url.charAt(start) === '/') {
-        start++
-    }
-    return url.slice(start, end)
-}
-
-function removeChildren(container) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-      }
 }
