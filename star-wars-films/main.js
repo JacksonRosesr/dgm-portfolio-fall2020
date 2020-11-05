@@ -1,6 +1,7 @@
 import { films } from '../data/films.js'
 
 const main = document.querySelector('main')
+const body = document.querySelector('body')
 
 for (let i = 0; i < 7; i++) {
     let figure = document.createElement('figure')
@@ -14,4 +15,9 @@ for (let i = 0; i < 7; i++) {
 
     main.appendChild(figure)
 }
-  
+function chooseBackdrop(){
+    let backdrop = document.createElement('background-image')
+
+}
+
+    

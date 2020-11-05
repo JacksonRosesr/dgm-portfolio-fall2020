@@ -61,6 +61,10 @@ color: whitesmoke;
 
 
 /*Work Section*/
+#projects{
+    margin-left:auto;
+    margin-right: auto;
+}
 .projects-section{
     text-align: center;
     padding: 0rem;
@@ -87,10 +91,11 @@ color: whitesmoke;
     width: 100%;
     height: 100%;
     max-width: 1280px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 6rem;
     margin-top: 6rem;
-    margin-right: 23rem;
+    
     
 }
 figure{
