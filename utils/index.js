@@ -12,3 +12,10 @@ export function getLastNumber(url) {
     }
     return url.slice(start, end)
 }
+export function backdrop(){
+    function randomI(max) { 
+       return (Math.floor(Math.random() * Math.floor(max)));
+    }
+    document.getElementById("mainContent").style.backgroundImage = `url(../BackDrops/backdrop:${randomI(7)}.jpg)`;
+    document.getElementById("mainContent").style.backgroundSize = "cover";
+}

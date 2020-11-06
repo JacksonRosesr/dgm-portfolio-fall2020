@@ -1,5 +1,7 @@
 import { films } from '../data/films.js'
 
+import{backdrop} from '../utils/index.js'
+
 const main = document.querySelector('main')
 const body = document.querySelector('body')
 
@@ -9,16 +11,13 @@ for (let i = 0; i < 7; i++) {
     figImg.src = `https://starwars-visualguide.com/assets/img/films/${i + 1}.jpg`
     let figCaption = document.createElement('figcaption')
     figCaption.textContent = films[i].title
+    figCaption.style.fontSize = "x-large";
+    figCaption.style.textDecoration = ("underline")
+    figCaption.style.backgroundSize = ('x-large')
 
     figure.appendChild(figImg)
     figure.appendChild(figCaption)
 
     main.appendChild(figure)
-}
-function backdrop(){
-    function randomI(max) { 
-       return (Math.floor(Math.random() * Math.floor(max)));
-    }
-document.getElementById("mainContent").style.backgroundImage = `url(../BackDrops/backdrop:${randomI(7)}.jpg)`;
 }
 backdrop()
