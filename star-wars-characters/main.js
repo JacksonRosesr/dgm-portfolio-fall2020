@@ -1,7 +1,8 @@
 import { people } from '../data/people.js'
 
-import{removeChildren} from '../utils/index.js'
+import{ removeChildren} from '../utils/index.js'
 import{getLastNumber} from '../utils/index.js'
+import{backdrop} from '../utils/index.js'
 
 const mainContent = document.querySelector('#main')
 
@@ -9,16 +10,28 @@ const mainHeader = document.createElement('header')
 mainHeader.className = 'mainHeader'
 document.body.insertBefore(mainHeader, mainContent)
 
+function buttonStyle(buttonName){
+    buttonName.style.textDecoration = "underline"
+    buttonName.style.borderRadius = '12px'
+    buttonName.style.backgroundColor= "#000"
+    buttonName.style.color = "#FFE81F"
+    buttonName.style.fontFamily = 'Franklin Gothic Medium'
+    buttonName.style.fontSize = "large"
+}
+
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
+buttonStyle(maleButton)
 mainHeader.appendChild(maleButton)
 
 const femaleButton = document.createElement('button')
 femaleButton.textContent = 'Female Characters'
+buttonStyle(femaleButton)
 mainHeader.appendChild(femaleButton)
 
 const otherButton = document.createElement('button')
 otherButton.textContent = 'Other Characters'
+buttonStyle(otherButton)
 mainHeader.appendChild(otherButton)
 
 const maleCharacters = people.filter(person => person.gender === 'male')
@@ -33,9 +46,7 @@ const otherCharacters = people.filter(person => {
     }
 })
 
-maleButton.addEventListener('click', (event) => {
-   populateDOM(maleCharacters)
-})
+maleButton.addEventListener('click', () => {populateDOM(maleCharacters)})
 
 femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
 
@@ -51,6 +62,11 @@ function populateDOM(characters) {
         charImg.addEventListener('error', () => charImg.hidden = true) // genius level
         const charCaption = document.createElement('figcaption')
         charCaption.textContent = element.name
+        charCaption.style.color = ("#FFE81F")
+        charCaption.style.backgroundColor = "rgba(0,0,0,0.5)"
+        charCaption.style.display = 'flex'
+        charCaption.style.alignItems = 'center'
+        charCaption.style.justifyContent = 'center'
     
         charFigure.appendChild(charImg)
         charFigure.appendChild(charCaption)
@@ -58,3 +74,4 @@ function populateDOM(characters) {
         mainContent.appendChild(charFigure)
     })
 }
+backdrop()

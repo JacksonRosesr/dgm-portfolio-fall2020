@@ -4,10 +4,10 @@
 
 }
 
-.mainheader{
+header{
     display: flex;
     justify-content: space-evenly;
-    background-color: beige;
+    background-color: none;
     margin: 1rem;
 }
 #main{
