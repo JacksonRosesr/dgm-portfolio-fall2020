@@ -15,9 +15,10 @@ for (let i = 0; i < 7; i++) {
 
     main.appendChild(figure)
 }
-function chooseBackdrop(){
-    let backdrop = document.createElement('background-image')
-
+function backdrop(){
+    function randomI(max) { 
+       return (Math.floor(Math.random() * Math.floor(max)));
+    }
+document.getElementById("mainContent").style.backgroundImage = `url(../BackDrops/backdrop:${randomI(7)}.jpg)`;
 }
-
-    
+backdrop()

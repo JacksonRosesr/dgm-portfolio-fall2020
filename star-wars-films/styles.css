@@ -14,5 +14,15 @@ figure{
 }
 figcaption{
     text-align: center;
-    background-color: lightsalmon;
+    color: #FFE81F;
+    background-color: #000;
+    font-family: 'Franklin Gothic Medium';
+}
+header{
+    text-align: center;
+    color: #FFE81F;
+    text-decoration: overline, underline;
+    font-family: 'Franklin Gothic Medium';
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   
 }
