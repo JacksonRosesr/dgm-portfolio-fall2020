@@ -21,3 +21,9 @@ a {
 li {
     list-style-type: none;
 }
+body{
+    color: black;
+    border: solid;
+    border-width: 5px;
+    border-radius: 3px;
+}
