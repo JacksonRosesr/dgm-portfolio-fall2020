@@ -1,0 +1,21 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+.mainFrame{
+    height: 100vh;
+}
+
+.tabs{
+    background-color: black;
+    border-bottom: solid;
+    border-color: #FFE81F;
+}
+.tabs a{
+    color: #4bd5ee;
+    font-family: "News Cycle";
+    
+    font-size: 20px;
+    background-color: black;
+}
+

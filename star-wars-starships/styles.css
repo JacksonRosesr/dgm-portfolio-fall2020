@@ -3,21 +3,28 @@
     box-sizing: border-box;
 }
 .container{
-    display:flex;
+    display: flex;
 }
+
 .main{
- margin: 8rem, auto;
+ margin: 8rem;
+ 
 }
 header, footer{
     display:flex;
-    color: Yellow;
+    color: #FFE81F;
+    font-family: 'Franklin Gothic Medium';
     text-decoration: underline overline;
     justify-content: center;
     font-size: 1rem;
 }
+header{
+    font-size: 2rem;
+}
 a {
     text-decoration: none;
     font-size: large;
+    color:  #4bd5ee;
 }
 
 li {
@@ -28,4 +35,19 @@ body{
     border: solid;
     border-width: 5px;
     border-radius: 3px;
+}
+.modal{
+    position: fixed;
+}
+.box{
+    background-color: black;
+    border: solid;
+    border-width: 1px;
+    border-color: #FFE81F;
+}
+.box figcaption{
+    color: #FFE81F; 
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.5rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
