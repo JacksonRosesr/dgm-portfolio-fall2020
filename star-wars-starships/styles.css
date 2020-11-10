@@ -10,6 +10,8 @@
 }
 header, footer{
     display:flex;
+    color: Yellow;
+    text-decoration: underline overline;
     justify-content: center;
     font-size: 1rem;
 }
