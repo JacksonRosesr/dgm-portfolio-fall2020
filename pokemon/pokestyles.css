@@ -1,0 +1,14 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+.pokemonGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.pokecard{
+    background-color: dodgerblue;
+    max-width: 200px;
+    height: 300px;
+}
