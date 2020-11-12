@@ -31,6 +31,8 @@ function populateNav(starships) {
         let listItem = document.createElement('li')
         listItem.textContent = starship.name
         anchorWrap.appendChild(listItem)
+        listItem.style.position = 'relative'
+        listItem.style.zIndex = '2'
         navList.appendChild(anchorWrap)
         nav.appendChild(navList)
     })
@@ -45,6 +47,8 @@ function populateShipView(shipData) {
         shipImage.hidden = true
         dialog.classList.toggle("is-active")
     })
+    shipImage.style.position = 'relative'
+    shipImage.style.zIndex = '2'
     shipView.appendChild(shipImage)
 }
 

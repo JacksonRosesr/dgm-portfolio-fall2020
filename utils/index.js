@@ -31,6 +31,7 @@ export function backdrop(){
         let xy = getRandomPosition()
         star.style.left = `${xy[0]}px`
         star.style.top = `${xy[1]}px `
+        //star.style.setProperty("z-index: 1")
         element.appendChild(star)
     }
 }
