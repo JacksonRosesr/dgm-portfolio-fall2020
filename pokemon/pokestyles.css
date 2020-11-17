@@ -1,14 +1,30 @@
 h1{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .pokemonGrid{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between
 }
-.pokecard{
-    background-color: dodgerblue;
-    max-width: 200px;
-    height: 300px;
+
+.scene{
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 10px 0;
+    perspective: 600px;
+}
+.card{
+    background-color: gold;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.card.is-flipped{
+    transform: rotateY(180);
 }
