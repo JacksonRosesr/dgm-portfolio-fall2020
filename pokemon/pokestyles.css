@@ -32,7 +32,18 @@ header {
     cursor: pointer;
     /* position: relative; */
   }
-
+  .card__face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+.card__face--front{
+background:red
+  }
+.card__face--front{
+  background:gold
+}
   .card.is-flipped {
     transform: rotateY(180deg);
   }
