@@ -21,7 +21,7 @@ header {
 .scene {
     width: 200px;
     height: 260px;
-    border: 1px solid #CCC;
+    border: 1px solid black;
     margin: 10px;
     perspective: 600px;
   }
@@ -30,7 +30,7 @@ header {
     width: 100%;
     height: 100%;
     transition: transform 1000ms;
-  transform-style: preserve-3d;
+    transform-style: preserve-3d;
     cursor: pointer;
     /* position: relative; */
   }
