@@ -49,3 +49,9 @@ background:red
   .card.is-flipped {
     transform: rotateY(180deg);
   }
+
+
+  footer{
+    display:flex;
+    justify-content: space-between;
+  }
