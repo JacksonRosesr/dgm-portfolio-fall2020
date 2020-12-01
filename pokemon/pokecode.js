@@ -73,6 +73,7 @@ function populateCardBack(pokemon){
     
     let backLabel = document.createElement('p')
     backLabel.textContent = `${pokemon.moves.length} moves`
+    backLabel.textContent = 'Orignal Rights Reserved to Pokémon Company and Nintendo'
     backLabel.addEventListener('click', ()=>{
         getMovesDetails(pokemonMoves)
     })

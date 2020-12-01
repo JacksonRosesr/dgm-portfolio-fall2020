@@ -163,7 +163,7 @@ figcaption{
     transition: transform 0.3s ease-out;
 }
 .contact-details:hover{
-transform: translateY(-8px);
+transform: translateY(-6px);
 }
 footer{
     margin: 5px;
