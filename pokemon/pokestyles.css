@@ -41,8 +41,10 @@ header {
     height: 100%;
     backface-visibility: hidden;
   }
-.card__face--front{
-background:red
+  .card__face--back {
+    background: blue;
+    color: white;
+    transform: rotateY(180deg);
   }
 .card__face--front{
   background:gold
@@ -53,6 +55,5 @@ background:red
 
 
   footer{
-    display:flex;
-    justify-content: space-between;
+    text-align: center;
   }
