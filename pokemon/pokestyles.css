@@ -56,4 +56,7 @@ header {
 
   footer{
     text-align: center;
+    border:solid;
+    border-color: gold;
+    border-width: thin;
   }
