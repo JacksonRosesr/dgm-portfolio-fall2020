@@ -1,3 +1,4 @@
+import{ removeChildren} from '../utils/index.js'
 // Reusable async function to fetch data from the provided url
 async function getAPIData(url) {
     try {
@@ -26,6 +27,7 @@ async function getAPIData(url) {
   const pokeGrid = document.querySelector('.pokemonGrid')
   const loadButton = document.querySelector('.load')
   const newPokemonButton = document.querySelector('.newPokemon')
+  const clearButton = document.querySelector('.clearPokemon')
   
   newPokemonButton.addEventListener('click', () => {
       let pokeName = prompt('What is your new Pokemon name?')
@@ -44,6 +46,10 @@ async function getAPIData(url) {
     //loadButton.hidden = true
     loadButton.disabled = true
   })
+
+  clearButton.addEventListener('click', () => {
+    removeChildren(pokeGrid)
+})
   
   function populatePokeCard(singlePokemon) {
     let pokeScene = document.createElement('div')
