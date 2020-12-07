@@ -12,7 +12,9 @@ header {
     color: gold;
     text-shadow: -2px -2px 0 dodgerblue, 2px -2px 0 dodgerblue, -2px 2px 0 dodgerblue, 2px 2px 0 dodgerblue;
 }
-
+button{
+  border-radius: 5px;
+}
 .pokemonGrid {
     display: flex;
     flex-wrap: wrap;
