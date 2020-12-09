@@ -13,6 +13,8 @@ header {
     text-shadow: -2px -2px 0 dodgerblue, 2px -2px 0 dodgerblue, -2px 2px 0 dodgerblue, 2px 2px 0 dodgerblue;
 }
 button{
+  color: gold;
+  background-color: dodgerblue;
   border-radius: 5px;
 }
 .pokemonGrid {
