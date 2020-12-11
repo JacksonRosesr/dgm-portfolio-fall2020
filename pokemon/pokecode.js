@@ -1,4 +1,4 @@
-import{ removeChildren} from '../utils/index.js'
+import{ removeChildren, pokeBackdrop} from '../utils/index.js'
 // Reusable async function to fetch data from the provided url
 async function getAPIData(url) {
     try {
@@ -9,7 +9,7 @@ async function getAPIData(url) {
       console.error(error)
     }
   }
-  
+  pokeBackdrop()
   // now, use the async getAPIData function
   function loadPage() {
     getAPIData(`https://pokeapi.co/api/v2/pokemon`).then(
@@ -22,6 +22,7 @@ async function getAPIData(url) {
         }
       },
     )
+  
   }
   
   const pokeGrid = document.querySelector('.pokemonGrid')
@@ -30,14 +31,17 @@ async function getAPIData(url) {
   const clearButton = document.querySelector('.clearPokemon')
   
   newPokemonButton.addEventListener('click', () => {
-      let pokeName = prompt('What is your new Pokemon name?')
+      let pokeName = prompt('What is your new Pokemon name?', "Ex. Pikachu, Gophermon, Goku, etc.")
+      let pokeType = prompt("What is your Pokemon's type?", "Ex. Fire, Water, Bug, etc.")
     let newPokemon = new Pokemon(
       pokeName,
+      pokeType,
       400,
       200,
       ['gorge', 'sleep', 'cough'],
       ['eat', 'study','code'])
       populatePokeCard(newPokemon)
+      populatePokeScene(newPokemon)
       // let's find pokemon by height or weight and combine to make new instances
   })
   
@@ -49,6 +53,7 @@ async function getAPIData(url) {
 
   clearButton.addEventListener('click', () => {
     removeChildren(pokeGrid)
+    loadButton.disabled = false
 })
   
   function populatePokeCard(singlePokemon) {
@@ -116,8 +121,9 @@ async function getAPIData(url) {
     return `pokeball`
   }
   
-  function Pokemon(name, height, weight, abilities, moves) {
+  function Pokemon(name, type, height, weight, abilities, moves) {
       this.name = name
+      this.type = type
       this.height = height
       this.weight = weight
       this.abilities = abilities

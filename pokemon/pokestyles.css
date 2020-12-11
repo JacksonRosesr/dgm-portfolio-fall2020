@@ -2,20 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: gold;
-    text-shadow: -2px -2px 0 dodgerblue, 2px -2px 0 dodgerblue, -2px 2px 0 dodgerblue, 2px 2px 0 dodgerblue;
+    color: #FFDE00;
+    background-color: #3B4CCA;
+    text-shadow: -1px -1px 0 #B3A125, 1px -1px 0 #B3A125, -1px 1px 0 #B3A125, 1px 1px 0 #B3A125;
+}
+header button{
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#nav{
+  display:flex;
+  justify-items: center;
+  
+  background-color: #F00;
+  width: 100%;
+  justify-content: center;
+  z-index: 10;
 }
 button{
-  color: gold;
-  background-color: dodgerblue;
+  color: #FFDE00;
+  background-color: #3B4CCA;
   border-radius: 5px;
+  display:block;
+  align-items: center;
+  border-left: solid 1px;
+  text-align: center;
+  font-size: large;
 }
 .pokemonGrid {
     display: flex;
@@ -37,6 +58,7 @@ button{
     transition: transform 1000ms;
     transform-style: preserve-3d;
     cursor: pointer;
+    border: solid #FFDE00 1px;
     /* position: relative; */
   }
   .card__face{
@@ -46,21 +68,28 @@ button{
     backface-visibility: hidden;
   }
   .card__face--back {
-    background: blue;
+    background: #3B4CCA;
     color: white;
     transform: rotateY(180deg);
   }
 .card__face--front{
   background:gold
 }
+.card__face--front img{
+  width: 200px;
+  height: 200px;
+}
   .card.is-flipped {
     transform: rotateY(180deg);
   }
-
+#mainContent{
+  width:100%;
+  height: 100%;
+}
 
   footer{
     text-align: center;
     border:solid;
-    border-color: gold;
+    border-color: #FFDE00;
     border-width: thin;
   }
