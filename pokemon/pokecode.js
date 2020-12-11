@@ -1,4 +1,4 @@
-import{ removeChildren, pokeBackdrop} from '../utils/index.js'
+import{ removeChildren, pokeBackdrop, backdrop} from '../utils/index.js'
 // Reusable async function to fetch data from the provided url
 async function getAPIData(url) {
     try {
@@ -12,7 +12,7 @@ async function getAPIData(url) {
   pokeBackdrop()
   // now, use the async getAPIData function
   function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
       //?limit=25&offset=800
       async (data) => {
         for (const pokemon of data.results) {
@@ -130,4 +130,4 @@ async function getAPIData(url) {
     this.id = 900
     this.moves = moves
   }
-
+pokeBackdrop()
