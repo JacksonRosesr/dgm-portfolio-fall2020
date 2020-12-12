@@ -24,7 +24,7 @@ export function pokeBackdrop(){
     function randomI(max) { 
        return (Math.floor(Math.random() * Math.floor(max)));
     }
-    document.getElementById("mainContent").style.backgroundImage = `url(../pokemonBackdrops/download:${randomI(8)}.jpg)`;
+    document.getElementById("mainContent").style.backgroundImage = `url(../pokemonBackdrops/download:${randomI(7)}.jpg)`;
     document.getElementById("mainContent").style.backgroundSize = "cover";
     document.getElementById("mainContent").style.backgroundRepeat ="no-repeat"
    
