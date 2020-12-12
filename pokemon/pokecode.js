@@ -22,7 +22,6 @@ async function getAPIData(url) {
         }
       },
     )
-  
   }
   
   const pokeGrid = document.querySelector('.pokemonGrid')
