@@ -83,12 +83,18 @@ async function getAPIData(url) {
   }
   
   function populateCardBack(pokemon) {
+    
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
     let backLabel = document.createElement('p')
-    backLabel.textContent = `${pokemon.moves.length} moves`
+    backLabel.textContent = `This pokemon can learn ${pokemon.moves.length} moves!`
     backLabel.addEventListener('click', () => getMovesDetails(pokemon.moves))
+    let backImage = document.createElement('img')
+    backImage.src= `../images/sprites/${getImageFileName(pokemon)}MS.png`
+    pokeBack.appendChild(backImage)
     pokeBack.appendChild(backLabel)
+    
+
     return pokeBack
   }
   
@@ -127,7 +133,7 @@ async function getAPIData(url) {
       this.height = height
       this.weight = weight
       this.abilities = abilities
-    this.id = 900
-    this.moves = moves
+      this.id = 900
+      this.moves = moves
   }
 pokeBackdrop()
