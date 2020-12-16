@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href= "styles.css" rel="stylesheet">
-    <script
-    src="https://kit.fontawesome.com/9f3880ef33.js"
-    crossorigin="anonymous"
-  ></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f3880ef33.js" crossorigin="anonymous"></script>
 
     <title>People of Congress</title>
 </head>
-<body>
-    <header>
-        <main>
-        <div id="buttonHeader">
-            <button id="seniorityButton">Highest Seniority</button>
-            <button id="youthButton">Lowest Seniority</button>
-            <button id="birthdayButton">Sort by Birthday</button>
-            <button id="repButton">Republicans</button>
-            <button id='demButton'>Democrats</button>
-            
-        </div>
-    </header>
-    
-    <div class="senatorGrid">
 
-    </div>
-        </main>
-    <footer>© Jackson Rosser Designs 2020</footer>
-   <script type ="module" src="index.js"></script>
-    
+<body>
+    <main>
+        <div id="navAndGrid">
+            <header id="top">
+
+                <div id="buttonHeader">
+                    <button id="seniorityButton">Highest Seniority</button>
+                    <button id="youthButton">Lowest Seniority</button>
+                    <button id="birthdayButton">Oldest to Youngest</button>
+                    <button id="birthdayButtonReverse">Youngest to Oldest</button>
+                    <button id="repButton">Republicans</button>
+                    <button id='demButton'>Democrats</button>
+
+                </div>
+            </header>
+            <div id="display">
+                <div class="column">
+                    <a href="#bottom">Jump to Bottom</a><br>
+
+                </div>
+                <div class="senatorGrid">
+
+                </div>
+                <div class="column">
+                    <a href="#bottom">Jump to Bottom</a><br>
+                </div>
+            </div>
+        </div>
+        <div id="display">
+            <div class="column">
+                <a href="#top">Jump to Top</a>
+            </div>
+            <footer id="bottom">© Jackson Rosser Designs 2020</footer>
+            <div class="column">
+                <a href="#top">Jump to Top</a>
+            </div>
+        </div>
+        
+    </main>
+
+    <script type="module" src="index.js"></script>
+
 </body>
+
 </html>

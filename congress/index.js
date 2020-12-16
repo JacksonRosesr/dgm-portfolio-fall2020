@@ -4,23 +4,28 @@ const senatorGrid = document.querySelector('.senatorGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const youthButton = document.querySelector('#youthButton')
 const birthdayButton = document.querySelector('#birthdayButton')
+const birthdayButtonReverse = document.querySelector('#birthdayButtonReverse')
 const republicanButton = document.querySelector('#repButton')
 const democraticButton = document.querySelector('#demButton')
+
 
 birthdayButton.addEventListener('click', () => {
     birthdaySort()
 })
-seniorityButton.addEventListener('click', () =>{
+birthdayButtonReverse.addEventListener('click', () => {
+    birthdaySortReverse()
+})
+seniorityButton.addEventListener('click', () => {
     senioritySort()
 })
-youthButton.addEventListener('click', () =>{
+youthButton.addEventListener('click', () => {
     youthSort()
 })
 
-republicanButton.addEventListener('click', () =>{
+republicanButton.addEventListener('click', () => {
     republicanDisplay()
 })
-democraticButton.addEventListener('click', ()=>{
+democraticButton.addEventListener('click', () => {
     democratDisplay()
 })
 function populateSenatorDiv(simpleSenators) {
@@ -35,7 +40,7 @@ function populateSenatorDiv(simpleSenators) {
         if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
         if (senator.party === 'ID') partyIcon.className = 'fas fa-star'
         figImg.src = senator.imgURL
-        figCaption.textContent = senator.name
+        figCaption.textContent = senator.name + " "
 
         figCaption.appendChild(partyIcon)
         senFigure.appendChild(figImg)
@@ -60,8 +65,8 @@ function getSimplifiedSenators(senatorArray) {
         }
     })
 }
-const filterSenators = (prop, value)=>{
-    return getSimplifiedSenators(senators).filter(senator =>{
+const filterSenators = (prop, value) => {
+    return getSimplifiedSenators(senators).filter(senator => {
         return senator[prop] === value
     })
 }
@@ -72,12 +77,19 @@ const democrats = filterSenators('party', 'D')
 const mostSeniority = getSimplifiedSenators(senators).reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
 
 const missedVotes = getSimplifiedSenators(senators).reduce((acc, senator) => acc.missedVotesPct > senator.missedVotesPct ? acc : senator)
-
+//Oldest to Youngest
 function birthdaySort() {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
         return a.date_of_birth - b.date_of_birth
     }))
 }
+//Youngest to Oldest
+function birthdaySortReverse() {
+    populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+        return b.date_of_birth - a.date_of_birth
+    }))
+}
+
 //Highest to Lowest Seniority
 function senioritySort() {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
@@ -85,21 +97,21 @@ function senioritySort() {
     }))
 }
 //Lowest to Highest Seniority
-function youthSort(){
+function youthSort() {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
         return a.seniority - b.seniority
     }))
 }
 //Show only Republicans
-function republicanDisplay(){
-    populateSenatorDiv(populateSenatorDiv(republicans).sort((a,b)=>{
+function republicanDisplay() {
+    populateSenatorDiv(populateSenatorDiv(republicans).sort((a, b) => {
         return a.seniority - b.seniority
     }))
-    
+
 }
 //Show only Democrats
-function democratDisplay(){
-    populateSenatorDiv(populateSenatorDiv(democrats).sort((a,b)=>{
+function democratDisplay() {
+    populateSenatorDiv(populateSenatorDiv(democrats).sort((a, b) => {
         return a.seniority - b.seniority
     }))
 }
