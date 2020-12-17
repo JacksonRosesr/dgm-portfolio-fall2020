@@ -7,6 +7,7 @@ const birthdayButton = document.querySelector('#birthdayButton')
 const birthdayButtonReverse = document.querySelector('#birthdayButtonReverse')
 const republicanButton = document.querySelector('#repButton')
 const democraticButton = document.querySelector('#demButton')
+const indeButton = document.querySelector('#indeButton')
 
 
 birthdayButton.addEventListener('click', () => {
@@ -27,6 +28,9 @@ republicanButton.addEventListener('click', () => {
 })
 democraticButton.addEventListener('click', () => {
     democratDisplay()
+})
+indeButton.addEventListener('click', () => {
+    iDisplay()
 })
 function populateSenatorDiv(simpleSenators) {
     removeChildren(senatorGrid)
@@ -73,10 +77,12 @@ const filterSenators = (prop, value) => {
 
 const republicans = filterSenators('party', 'R')
 const democrats = filterSenators('party', 'D')
+const independents = filterSenators('party', 'ID')
 
 const mostSeniority = getSimplifiedSenators(senators).reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
 
 const missedVotes = getSimplifiedSenators(senators).reduce((acc, senator) => acc.missedVotesPct > senator.missedVotesPct ? acc : senator)
+
 //Oldest to Youngest
 function birthdaySort() {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
@@ -115,6 +121,13 @@ function democratDisplay() {
         return a.seniority - b.seniority
     }))
 }
+//Show only Independents
+function iDisplay() {
+    populateSenatorDiv(populateSenatorDiv(independents).sort((a, b) => {
+        return a.seniority - b.seniority
+    }))
+}
+
 console.log(mostSeniority, missedVotes, republicans, democrats)
 
 
